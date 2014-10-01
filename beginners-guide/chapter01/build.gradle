@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
+
+group = 'com.packtpub.pfbg'
+version = '0.0.1'
+
+description = """PrimeFaces Beginner's Guide Chapter 01"""
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+
+
+repositories {
+        
+     maven { url "http://repository.primefaces.org" }
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'com.sun.faces', name: 'jsf-api', version:'2.1.13'
+    compile group: 'com.sun.faces', name: 'jsf-impl', version:'2.1.13'
+    compile group: 'org.primefaces', name: 'primefaces', version:'4.0'
+    compile group: 'log4j', name: 'log4j', version:'1.2.17'
+}
